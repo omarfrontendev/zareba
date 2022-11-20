@@ -1,0 +1,94 @@
+@import '../../styles/variables.scss';
+
+.section {
+  .section__title {
+    margin-bottom: 18px;
+  }
+  .section__subtitle {
+    font-weight: $ft__W__Medium;
+    font-size: $ft__20;
+  }
+  .section__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    .steps {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      margin-right: 6px;
+      .signle__step {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        padding: 20px 20px 20px 30px;
+        border-radius: 16px;
+        box-shadow: 0px 4px 20px 3px #dddddd45;
+        cursor: pointer;
+        transition: $transition;
+        position: relative;
+        background-color: $pure__white;
+        .cursor {
+          position: fixed;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          transition: .1s;
+          transform: translate(-50%, -50%);
+          pointer-events: none;
+          mix-blend-mode: difference;
+          background-color: #FFF;
+          display: none;
+          &.hover {
+            transform: scale(4);
+          }
+        }
+        .setp__icon:hover ~ .cursor,
+        .step__details:hover ~ .cursor {
+          transform: scale(4);
+        }
+        .setp__icon {
+          z-index: 11;
+        }
+        &.active {
+          color: $main__orange;
+          background-color: #000;
+          position: relative;
+          color: #FFF;
+          &:hover {
+            .cursor {
+              display: block;
+            }
+          }
+        }
+        .step__title {
+          font-size: $ft__24;
+          margin-bottom: 16px;
+        }
+        .step__desc {
+          font-size: $ft__18;
+        }
+        .setp__icon {
+          svg {
+            width: 100px;
+          }
+        }
+      }
+      .images {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        img {
+          width: 200px;
+        }
+      }
+    }
+    .step__image{
+      img {
+        width: 300px;
+      }
+    }
+  }
+}
+

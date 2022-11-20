@@ -1,0 +1,73 @@
+@import '../../styles/variables.scss';
+
+.section {
+  padding: 150px 0;
+  background-color: $main__orange;
+  .section__title {
+    color: $pure__white;
+    font-size: 4rem;
+    margin-bottom: 40px;
+  }
+  .services__content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    .service__box {
+      padding: 40px 40px 0 40px;
+      background-color: $pure__white;
+      color: $pure__black;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      flex-basis: calc(50% - 10px);
+      border-radius: 14px;
+      &:first-child {
+        flex-basis: 100%;
+        flex-direction: row;
+        align-items: center;
+      }
+      .service__details {
+        padding-bottom: 20px;
+        .service__title {
+          margin-bottom: 30px;
+        }
+        .service__desc {
+          margin-bottom: 10px;
+          font-size: $ft__22;
+          font-weight: $ft__W__Regular;
+        }
+        .list {
+          display: flex;
+          flex-direction: column;
+          row-gap: 20px;
+          padding-top: 30px;
+          .signle__line__service {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            column-gap: 10px;
+            font-size: $ft__20;
+            .check__icon {
+              color: $main__orange;
+            }
+          }
+        }
+        .button {
+          margin-top: 40px;
+          padding: 20px 40px;
+          border-radius: 8px;
+          background-color: $main__orange;
+          transition: $transition;
+          color: $pure__white;
+          font-size: $ft__20;
+          border: 2px solid $main__orange;
+          &:hover {
+            background-color: $pure__white;
+            color: $main__orange;
+          }
+        }
+      }
+    }
+  } 
+}
